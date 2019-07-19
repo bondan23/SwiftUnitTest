@@ -10,12 +10,6 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-
-//func greek <Whole, Part> (keyPath: WritableKeyPath<Whole, Part>, part: Part) -> ((Whole) -> Whole) {
-//    print(keyPath, "hmm")
-//    return lens(keyPath) .~ part
-//}
-
 class CreateShopViewController: UIViewController {
     @IBOutlet var shopNameTextField: UITextField!
     @IBOutlet var shopNameError: UILabel!
