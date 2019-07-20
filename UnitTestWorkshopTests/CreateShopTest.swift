@@ -27,10 +27,6 @@ private class CreateShopTest: CreateShopViewModelBaseTest {
                     
                 }
                 
-                it("invalid shopname, still show a valid domain name"){
-                   
-                }
-                
                 it("shows error when shop name has less than 3 characters") {
                    
                 }
@@ -42,6 +38,11 @@ private class CreateShopTest: CreateShopViewModelBaseTest {
                 it("shows error when contain emoji") {
                     
                 }
+                
+                it("invalid shopname, still show a valid domain name"){
+                    
+                }
+                
             }
             
             context("Typing domain name") {
