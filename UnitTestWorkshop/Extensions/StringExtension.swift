@@ -13,8 +13,12 @@ extension String {
         return "Postal Code"
     }
     
+    static var shopNameNotAvailable: String {
+        return "Shop name not available"
+    }
+    
     static var below3Characters: String {
-        return "Should not less than 3 characters 🍑 🖕"
+        return "Should not less than 3 characters"
     }
     
     static var requiredField: String {
