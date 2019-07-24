@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233D52EC22E814B300DE7213 /* OpenShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233D52EB22E814B200DE7213 /* OpenShopViewController.swift */; };
 		23E317D022E200FD00A898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317CF22E200FD00A898EC /* AppDelegate.swift */; };
 		23E317D222E200FD00A898EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317D122E200FD00A898EC /* ViewController.swift */; };
 		23E317D522E200FD00A898EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E317D322E200FD00A898EC /* Main.storyboard */; };
@@ -15,20 +16,18 @@
 		23E317F222E2030300A898EC /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317F122E2030300A898EC /* Observable+Ext.swift */; };
 		23E317F822E2031100A898EC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317F522E2031100A898EC /* ViewModelType.swift */; };
 		23E3180322E2055F00A898EC /* PostalCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317FA22E2055F00A898EC /* PostalCodeViewController.swift */; };
-		23E3180522E2055F00A898EC /* CreateShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317FC22E2055F00A898EC /* CreateShopViewController.swift */; };
 		23E3180622E2055F00A898EC /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317FD22E2055F00A898EC /* CityViewController.swift */; };
-		23E3180722E2055F00A898EC /* CreateShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317FE22E2055F00A898EC /* CreateShopViewModel.swift */; };
+		23E3180722E2055F00A898EC /* OpenShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E317FE22E2055F00A898EC /* OpenShopViewModel.swift */; };
 		23E3180822E2055F00A898EC /* PostalCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E317FF22E2055F00A898EC /* PostalCodeViewController.xib */; };
-		23E3180922E2055F00A898EC /* CreateShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E3180022E2055F00A898EC /* CreateShopViewController.xib */; };
+		23E3180922E2055F00A898EC /* OpenShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E3180022E2055F00A898EC /* OpenShopViewController.xib */; };
 		23E3180A22E2055F00A898EC /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E3180122E2055F00A898EC /* CityViewController.xib */; };
-		23E3181122E2058C00A898EC /* CreateShopUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3180F22E2058C00A898EC /* CreateShopUsecase.swift */; };
+		23E3181122E2058C00A898EC /* OpenShopUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3180F22E2058C00A898EC /* OpenShopUsecase.swift */; };
 		23E3181922E2062E00A898EC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3181822E2062E00A898EC /* City.swift */; };
 		23E3181B22E2073700A898EC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3181A22E2073700A898EC /* StringExtension.swift */; };
 		23E3181D22E207A600A898EC /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3181C22E207A600A898EC /* UIKitExtension.swift */; };
 		23E3181F22E2082D00A898EC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3181E22E2082D00A898EC /* NSObjectExtension.swift */; };
 		23E3182222E208EC00A898EC /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182022E2086700A898EC /* TestObserver.swift */; };
-		23E3182422E2091300A898EC /* CreateShopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182322E2091300A898EC /* CreateShopTest.swift */; };
-		23E3182622E2094E00A898EC /* CreateShopViewModelBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182522E2094E00A898EC /* CreateShopViewModelBaseTest.swift */; };
+		23E3182622E2094E00A898EC /* OpenShopViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */; };
 		69AD42C58AB3FDA49898E737 /* Pods_UnitTestWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1BE32F8FB10F153C66149 /* Pods_UnitTestWorkshop.framework */; };
 		B92195D66D36D7E666606127 /* Pods_UnitTestWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30BC5092FD4A73603757547 /* Pods_UnitTestWorkshopTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		10F08B69C05CC3A362411AF4 /* Pods-UnitTestWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshopTests/Pods-UnitTestWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		233D52EB22E814B200DE7213 /* OpenShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenShopViewController.swift; sourceTree = "<group>"; };
 		23E317CC22E200FD00A898EC /* UnitTestWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E317CF22E200FD00A898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E317D122E200FD00A898EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,20 +57,18 @@
 		23E317F122E2030300A898EC /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		23E317F522E2031100A898EC /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		23E317FA22E2055F00A898EC /* PostalCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostalCodeViewController.swift; sourceTree = "<group>"; };
-		23E317FC22E2055F00A898EC /* CreateShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateShopViewController.swift; sourceTree = "<group>"; };
 		23E317FD22E2055F00A898EC /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
-		23E317FE22E2055F00A898EC /* CreateShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateShopViewModel.swift; sourceTree = "<group>"; };
+		23E317FE22E2055F00A898EC /* OpenShopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenShopViewModel.swift; sourceTree = "<group>"; };
 		23E317FF22E2055F00A898EC /* PostalCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostalCodeViewController.xib; sourceTree = "<group>"; };
-		23E3180022E2055F00A898EC /* CreateShopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateShopViewController.xib; sourceTree = "<group>"; };
+		23E3180022E2055F00A898EC /* OpenShopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenShopViewController.xib; sourceTree = "<group>"; };
 		23E3180122E2055F00A898EC /* CityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityViewController.xib; sourceTree = "<group>"; };
-		23E3180F22E2058C00A898EC /* CreateShopUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateShopUsecase.swift; sourceTree = "<group>"; };
+		23E3180F22E2058C00A898EC /* OpenShopUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenShopUsecase.swift; sourceTree = "<group>"; };
 		23E3181822E2062E00A898EC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		23E3181A22E2073700A898EC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		23E3181C22E207A600A898EC /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		23E3181E22E2082D00A898EC /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		23E3182022E2086700A898EC /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
-		23E3182322E2091300A898EC /* CreateShopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShopTest.swift; sourceTree = "<group>"; };
-		23E3182522E2094E00A898EC /* CreateShopViewModelBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateShopViewModelBaseTest.swift; sourceTree = "<group>"; };
+		23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenShopViewModelTest.swift; sourceTree = "<group>"; };
 		70058CA74B60C80C62340BAE /* Pods-UnitTestWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshopTests/Pods-UnitTestWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C91D5A98E1ABA6B715AA2C0 /* Pods-UnitTestWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshop/Pods-UnitTestWorkshop.release.xcconfig"; sourceTree = "<group>"; };
 		7FA1BE32F8FB10F153C66149 /* Pods_UnitTestWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,16 +120,16 @@
 			isa = PBXGroup;
 			children = (
 				23E317DB22E200FF00A898EC /* Info.plist */,
+				233D52EB22E814B200DE7213 /* OpenShopViewController.swift */,
+				23E317FE22E2055F00A898EC /* OpenShopViewModel.swift */,
+				23E3180022E2055F00A898EC /* OpenShopViewController.xib */,
 				23E317CF22E200FD00A898EC /* AppDelegate.swift */,
 				23E317FD22E2055F00A898EC /* CityViewController.swift */,
-				23E317FC22E2055F00A898EC /* CreateShopViewController.swift */,
-				23E317FE22E2055F00A898EC /* CreateShopViewModel.swift */,
+				23E3180122E2055F00A898EC /* CityViewController.xib */,
 				23E317FA22E2055F00A898EC /* PostalCodeViewController.swift */,
+				23E317FF22E2055F00A898EC /* PostalCodeViewController.xib */,
 				23E317D122E200FD00A898EC /* ViewController.swift */,
 				23E317D622E200FF00A898EC /* Assets.xcassets */,
-				23E3180122E2055F00A898EC /* CityViewController.xib */,
-				23E3180022E2055F00A898EC /* CreateShopViewController.xib */,
-				23E317FF22E2055F00A898EC /* PostalCodeViewController.xib */,
 				23E3180E22E2058C00A898EC /* API */,
 				23E3181722E205CC00A898EC /* Domain */,
 				23E317F022E2029B00A898EC /* Extensions */,
@@ -145,9 +143,8 @@
 		23E317E322E2010000A898EC /* UnitTestWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
-				23E3182522E2094E00A898EC /* CreateShopViewModelBaseTest.swift */,
+				23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */,
 				23E317E622E2010000A898EC /* Info.plist */,
-				23E3182322E2091300A898EC /* CreateShopTest.swift */,
 			);
 			path = UnitTestWorkshopTests;
 			sourceTree = "<group>";
@@ -175,7 +172,7 @@
 		23E3180E22E2058C00A898EC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				23E3180F22E2058C00A898EC /* CreateShopUsecase.swift */,
+				23E3180F22E2058C00A898EC /* OpenShopUsecase.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -293,7 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E3180922E2055F00A898EC /* CreateShopViewController.xib in Resources */,
+				23E3180922E2055F00A898EC /* OpenShopViewController.xib in Resources */,
 				23E3180A22E2055F00A898EC /* CityViewController.xib in Resources */,
 				23E3180822E2055F00A898EC /* PostalCodeViewController.xib in Resources */,
 				23E317DA22E200FF00A898EC /* LaunchScreen.storyboard in Resources */,
@@ -416,17 +413,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E3181F22E2082D00A898EC /* NSObjectExtension.swift in Sources */,
-				23E3180522E2055F00A898EC /* CreateShopViewController.swift in Sources */,
+				233D52EC22E814B300DE7213 /* OpenShopViewController.swift in Sources */,
 				23E3180322E2055F00A898EC /* PostalCodeViewController.swift in Sources */,
 				23E3181B22E2073700A898EC /* StringExtension.swift in Sources */,
 				23E317D222E200FD00A898EC /* ViewController.swift in Sources */,
 				23E317F822E2031100A898EC /* ViewModelType.swift in Sources */,
-				23E3181122E2058C00A898EC /* CreateShopUsecase.swift in Sources */,
+				23E3181122E2058C00A898EC /* OpenShopUsecase.swift in Sources */,
 				23E3181D22E207A600A898EC /* UIKitExtension.swift in Sources */,
 				23E317F222E2030300A898EC /* Observable+Ext.swift in Sources */,
 				23E3181922E2062E00A898EC /* City.swift in Sources */,
 				23E317D022E200FD00A898EC /* AppDelegate.swift in Sources */,
-				23E3180722E2055F00A898EC /* CreateShopViewModel.swift in Sources */,
+				23E3180722E2055F00A898EC /* OpenShopViewModel.swift in Sources */,
 				23E3180622E2055F00A898EC /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,8 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E3182222E208EC00A898EC /* TestObserver.swift in Sources */,
-				23E3182422E2091300A898EC /* CreateShopTest.swift in Sources */,
-				23E3182622E2094E00A898EC /* CreateShopViewModelBaseTest.swift in Sources */,
+				23E3182622E2094E00A898EC /* OpenShopViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

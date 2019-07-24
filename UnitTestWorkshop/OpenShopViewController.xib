@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateShopViewController" customModule="TokopediAlone" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpenShopViewController" customModule="UnitTestWorkshop" customModuleProvider="target">
             <connections>
                 <outlet property="cityError" destination="PVo-QV-mVm" id="5Zq-pC-M1L"/>
                 <outlet property="domainNameError" destination="WuI-7f-6y9" id="H9z-HC-oF5"/>

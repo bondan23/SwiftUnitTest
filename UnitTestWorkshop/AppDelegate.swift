@@ -19,15 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let mockUseCase = CreateShopUsecase()
-        mockUseCase.getDomainName = { Driver.just("\($0)-4") }
-        mockUseCase.checkShopNameAvailability = { name in
-            return name.lowercased().contains("tokopedia") ? .just("Shop name not available") : .just(nil)
-        }
-        mockUseCase.checkDomainNameAvailability = { _ in return .just(nil)}
-        
-        window?.rootViewController = CreateShopViewController(useCase: mockUseCase)
+        window?.rootViewController = OpenShopViewController()
         window?.makeKeyAndVisible()
         
         return true
