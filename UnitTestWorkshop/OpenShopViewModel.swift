@@ -32,9 +32,18 @@ class OpenShopViewModel: ViewModelType {
             return useCase.getDomainName(name)
         }
         
-        let shopNameError = input.shopNameTrigger.flatMapLatest{ [useCase] name in
+        let lessThan3 = input.shopNameTrigger.filter{ $0.count <= 3 }.map{ name -> String? in
+            return .some("Less than 3 characters")
+        }
+        
+        let checkShopName = input.shopNameTrigger.filter{ $0.count > 3 }.flatMapLatest{ [useCase] name in
             return useCase.checkShopName(name)
         }
+        
+        let shopNameError = Driver.merge(
+            lessThan3,
+            checkShopName
+        )
         
         return Output(
             domainName: getDomainName,

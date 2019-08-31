@@ -47,11 +47,12 @@ public class OpenShopViewModelTest: QuickSpec {
         
         describe("Open Shop Screen") {
             context("When typing shop name") {
-                it("Then Valid Shopname, will generate domain name suggestion") {
+                beforeEach {
                     useCase.getDomainName = {
                         .just("\($0)-4")
                     }
-                    
+                }
+                it("Then Valid Shopname, will generate domain name suggestion") {
                     useCase.checkShopName = { _ in
                         .just(nil)
                     }
@@ -61,17 +62,18 @@ public class OpenShopViewModelTest: QuickSpec {
                 }
                 
                 it("Then Invalid Shopname, still generate the domain name") {
-                    useCase.getDomainName = {
-                        .just("\($0)-4")
-                    }
-                    
                     useCase.checkShopName = { _ in
                         .just("Shop name not available")
                     }
                     
-                    self.inputShopNameTrigger.onNext("Tokopedia")
-                    self.domainNameValue.assertValue("Tokopedia-4")
+                    self.inputShopNameTrigger.onNext("TopedShop")
+                    self.domainNameValue.assertValue("TopedShop-4")
                     self.shopNameErrorValue.assertValue("Shop name not available")
+                }
+                
+                it("Then Show Error when shop name has less than 3 chacaters") {
+                    self.inputShopNameTrigger.onNext("To")
+                    self.shopNameErrorValue.assertValue("Less than 3 characters")
                 }
             }
         }
