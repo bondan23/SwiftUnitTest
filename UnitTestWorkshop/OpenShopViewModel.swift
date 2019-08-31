@@ -32,7 +32,7 @@ class OpenShopViewModel: ViewModelType {
             return useCase.getDomainName(name)
         }
         
-        let lessThan3 = input.shopNameTrigger.filter{ $0.count <= 3 }.map{ name -> String? in
+        let lessThan3 = input.shopNameTrigger.filter{ $0.count < 3 }.map{ name -> String? in
             return .some("Less than 3 characters")
         }
         
