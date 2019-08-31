@@ -16,6 +16,7 @@ public class OpenShopViewModelTest: QuickSpec {
     public let inputShopNameTrigger = PublishSubject<String>()
     
     public var domainNameValue: TestObserver<String>!
+    public var shopNameErrorValue: TestObserver<String?>!
     
     private var disposeBag = DisposeBag()
     
@@ -24,6 +25,7 @@ public class OpenShopViewModelTest: QuickSpec {
         
         // Setup Output
         self.domainNameValue = TestObserver<String>()
+        self.shopNameErrorValue = TestObserver<String?>()
         
         let input = OpenShopViewModel.Input(
             shopNameTrigger: inputShopNameTrigger.asDriverOnErrorJustComplete()
@@ -31,7 +33,8 @@ public class OpenShopViewModelTest: QuickSpec {
         
         let output = viewModel.transform(input: input)
         
-        output.domainNameValue.drive(domainNameValue.observer).disposed(by: disposeBag)
+        output.domainName.drive(domainNameValue.observer).disposed(by: disposeBag)
+        output.shopNameError.drive(shopNameErrorValue.observer).disposed(by: disposeBag)
     }
     
     public override func spec() {
@@ -49,8 +52,26 @@ public class OpenShopViewModelTest: QuickSpec {
                         .just("\($0)-4")
                     }
                     
+                    useCase.checkShopName = { _ in
+                        .just(nil)
+                    }
+                    
                     self.inputShopNameTrigger.onNext("TopedShop")
                     self.domainNameValue.assertValue("TopedShop-4")
+                }
+                
+                it("Then Invalid Shopname, still generate the domain name") {
+                    useCase.getDomainName = {
+                        .just("\($0)-4")
+                    }
+                    
+                    useCase.checkShopName = { _ in
+                        .just("Shop name not available")
+                    }
+                    
+                    self.inputShopNameTrigger.onNext("Tokopedia")
+                    self.domainNameValue.assertValue("Tokopedia-4")
+                    self.shopNameErrorValue.assertValue("Shop name not available")
                 }
             }
         }

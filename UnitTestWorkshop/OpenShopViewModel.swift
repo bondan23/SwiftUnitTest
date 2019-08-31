@@ -17,7 +17,8 @@ class OpenShopViewModel: ViewModelType {
     }
     
     struct Output {
-        let domainNameValue: Driver<String>
+        let domainName: Driver<String>
+        let shopNameError: Driver<String?>
     }
     
     private let useCase: OpenShopUsecase
@@ -31,6 +32,13 @@ class OpenShopViewModel: ViewModelType {
             return useCase.getDomainName(name)
         }
         
-        return Output(domainNameValue: getDomainName)
+        let shopNameError = input.shopNameTrigger.flatMapLatest{ [useCase] name in
+            return useCase.checkShopName(name)
+        }
+        
+        return Output(
+            domainName: getDomainName,
+            shopNameError: shopNameError
+        )
     }
 }
