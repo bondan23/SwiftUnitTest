@@ -13,6 +13,26 @@ import RxSwift
 @testable import UnitTestWorkshop
 
 public class OpenShopViewModelTest: QuickSpec {
+    public let inputShopNameTrigger = PublishSubject<String>()
+    
+    public var domainNameValue: TestObserver<String>!
+    
+    private var disposeBag = DisposeBag()
+    
+    public func setupBinding(viewModel: OpenShopViewModel){
+        disposeBag = DisposeBag()
+        
+        // Setup Output
+        self.domainNameValue = TestObserver<String>()
+        
+        let input = OpenShopViewModel.Input(
+            inputShopNameTrigger: inputShopNameTrigger.asDriverOnErrorJustComplete()
+        )
+        
+        let output = viewModel.transform(input: input)
+        
+        output.domainNameValue.drive(domainNameValue.observer).disposed(by: disposeBag)
+    }
     
     public override func spec() {
         describe("Open Shop Screen") {

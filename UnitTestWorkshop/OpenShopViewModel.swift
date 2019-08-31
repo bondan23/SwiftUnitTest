@@ -13,11 +13,11 @@ import RxOptional
 
 class OpenShopViewModel: ViewModelType {
     struct Input {
-        
+        let inputShopNameTrigger: Driver<String>
     }
     
     struct Output {
-        
+        let domainNameValue: Driver<String>
     }
     
     private let useCase: OpenShopUsecase
@@ -27,6 +27,6 @@ class OpenShopViewModel: ViewModelType {
     }
     
     func transform(input: OpenShopViewModel.Input) -> OpenShopViewModel.Output {
-        return Output()
+        return Output(domainNameValue: .empty())
     }
 }
