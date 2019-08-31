@@ -8,8 +8,8 @@
 
 import Foundation
 import RxCocoa
-import RxSwift
 import RxOptional
+import RxSwift
 
 class OpenShopViewModel: ViewModelType {
     struct Input {
@@ -28,20 +28,34 @@ class OpenShopViewModel: ViewModelType {
     }
     
     func transform(input: OpenShopViewModel.Input) -> OpenShopViewModel.Output {
-        let getDomainName = input.shopNameTrigger.flatMapLatest{ [useCase] name in
-            return useCase.getDomainName(name)
+        let getDomainName = input.shopNameTrigger.flatMapLatest { [useCase] name in
+            useCase.getDomainName(name)
         }
         
-        let lessThan3 = input.shopNameTrigger.filter{ $0.count < 3 }.map{ name -> String? in
-            return .some("Less than 3 characters")
-        }
+        let lessThan3 = input.shopNameTrigger
+            .filter {
+                $0.count < 3 && !$0.hasPrefix(" ") && !$0.hasSuffix(" ")
+            }
+            .map { _ -> String? in
+                .some("Less than 3 characters")
+            }
         
-        let checkShopName = input.shopNameTrigger.filter{ $0.count > 3 }.flatMapLatest{ [useCase] name in
-            return useCase.checkShopName(name)
+        let containEmptySpace = input.shopNameTrigger
+            .filter { $0.hasPrefix(" ") || $0.hasSuffix(" ") }
+            .map { _ -> String? in
+                .some("Should not start or end with empty space")
+            }
+        
+        let checkShopName = input.shopNameTrigger.filter {
+            $0.count > 3 && !$0.hasPrefix(" ") && !$0.hasSuffix(" ")
+        }
+        .flatMapLatest { [useCase] name in
+            useCase.checkShopName(name)
         }
         
         let shopNameError = Driver.merge(
             lessThan3,
+            containEmptySpace,
             checkShopName
         )
         

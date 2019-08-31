@@ -75,6 +75,11 @@ public class OpenShopViewModelTest: QuickSpec {
                     self.inputShopNameTrigger.onNext("To")
                     self.shopNameErrorValue.assertValue("Less than 3 characters")
                 }
+                
+                it("Then Show Error when shop name start or end with spacing"){
+                    self.inputShopNameTrigger.onNext("TopedShop ")
+                    self.shopNameErrorValue.assertValue("Should not start or end with empty space")
+                }
             }
         }
     }
