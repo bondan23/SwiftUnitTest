@@ -11,5 +11,9 @@ import RxSwift
 import Foundation
 
 class OpenShopUsecase {
-    
+    var getDomainName = _getDomainName
+}
+
+private func _getDomainName(name: String) -> Driver<String> {
+    fatalError()
 }
