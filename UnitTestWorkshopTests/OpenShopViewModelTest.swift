@@ -35,6 +35,13 @@ public class OpenShopViewModelTest: QuickSpec {
     }
     
     public override func spec() {
+        var useCase = OpenShopUsecase()
+        beforeEach {
+            useCase = OpenShopUsecase()
+            let viewModel = OpenShopViewModel(useCase: useCase)
+            self.setupBinding(viewModel: viewModel)
+        }
+        
         describe("Open Shop Screen") {
             context("When typing shop name") {
                 it("Then Valid Shopname, will generate domain name suggestion") {
