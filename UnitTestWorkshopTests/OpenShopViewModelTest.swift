@@ -26,7 +26,7 @@ public class OpenShopViewModelTest: QuickSpec {
         self.domainNameValue = TestObserver<String>()
         
         let input = OpenShopViewModel.Input(
-            inputShopNameTrigger: inputShopNameTrigger.asDriverOnErrorJustComplete()
+            shopNameTrigger: inputShopNameTrigger.asDriverOnErrorJustComplete()
         )
         
         let output = viewModel.transform(input: input)
@@ -45,6 +45,10 @@ public class OpenShopViewModelTest: QuickSpec {
         describe("Open Shop Screen") {
             context("When typing shop name") {
                 it("Then Valid Shopname, will generate domain name suggestion") {
+                    useCase.getDomainName = {
+                        .just("\($0)-4")
+                    }
+                    
                     self.inputShopNameTrigger.onNext("TopedShop")
                     self.domainNameValue.assertValue("TopedShop-4")
                 }
