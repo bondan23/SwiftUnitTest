@@ -32,36 +32,28 @@ class OpenShopViewModel: ViewModelType {
             useCase.getDomainName(name)
         }
         
-        let lessThan3 = input.shopNameTrigger
-            .filter {
-                $0.count < 3 && !$0.hasPrefix(" ") && !$0.hasSuffix(" ")
-            }
-            .map { _ -> String? in
-                .some("Less than 3 characters")
-            }
+        let isLessThan3 = input.shopNameTrigger.map{ $0.count < 3 }
+        let isContainSpace = input.shopNameTrigger.map{ $0.hasPrefix(" ") || $0.hasSuffix(" ") }
+        let isContainEmoji = input.shopNameTrigger.map{ $0.containsEmoji }
         
-        let containEmptySpace = input.shopNameTrigger
-            .filter { $0.hasPrefix(" ") || $0.hasSuffix(" ") }
-            .map { _ -> String? in
-                .some("Should not start or end with empty space")
-            }
-        
-        let containEmoji = input.shopNameTrigger.filter{ $0.containsEmoji }.map { _ -> String? in
-            return .some("Should not contain emoji")
+        let validShopName = Driver.combineLatest(isLessThan3, isContainSpace, isContainEmoji).map{
+            !$0 && !$1 && !$2
         }
         
-        let checkShopName = input.shopNameTrigger.filter {
-            $0.count > 3 && !$0.hasPrefix(" ") && !$0.hasSuffix(" ") && !$0.containsEmoji
+        let checkShopName = input.shopNameTrigger.withLatestFrom(validShopName){
+            ($0, $1)
         }
+        .filter{ $0.1 }
+        .map{ $0.0 }
         .flatMapLatest { [useCase] name in
             useCase.checkShopName(name)
         }
         
         let shopNameError = Driver.merge(
-            lessThan3,
-            containEmptySpace,
             checkShopName,
-            containEmoji
+            isLessThan3.filter{ $0 }.map{ _ in .some("Less than 3 characters")},
+            isContainSpace.filter{ $0 }.map{ _ in .some("Should not start or end with empty space")},
+            isContainEmoji.filter{ $0 }.map{ _ in .some("Should not contain emoji")}
         )
         
         return Output(

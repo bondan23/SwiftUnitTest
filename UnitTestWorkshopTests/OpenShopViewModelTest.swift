@@ -52,6 +52,7 @@ public class OpenShopViewModelTest: QuickSpec {
                         .just("\($0)-4")
                     }
                 }
+                
                 it("Then Valid Shopname, will generate domain name suggestion") {
                     useCase.checkShopName = { _ in
                         .just(nil)
