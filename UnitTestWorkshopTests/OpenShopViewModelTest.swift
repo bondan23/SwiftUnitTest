@@ -15,6 +15,13 @@ import RxSwift
 public class OpenShopViewModelTest: QuickSpec {
     
     public override func spec() {
-        
+        describe("Open Shop Screen") {
+            context("When typing shop name") {
+                it("Then Valid Shopname, will generate domain name suggestion") {
+                    self.inputShopNameTrigger.onNext("TopedShop")
+                    self.domainNameValue.assertValue("TopedShop-4")
+                }
+            }
+        }
     }
 }
