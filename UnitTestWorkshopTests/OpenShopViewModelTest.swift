@@ -80,6 +80,11 @@ public class OpenShopViewModelTest: QuickSpec {
                     self.inputShopNameTrigger.onNext("TopedShop ")
                     self.shopNameErrorValue.assertValue("Should not start or end with empty space")
                 }
+                
+                it("Then Show Error when shop name contain emoji") {
+                    self.inputShopNameTrigger.onNext("TopedShop🍑")
+                    self.shopNameErrorValue.assertValue("Should not contain emoji")
+                }
             }
         }
     }

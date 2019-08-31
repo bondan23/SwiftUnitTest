@@ -46,8 +46,12 @@ class OpenShopViewModel: ViewModelType {
                 .some("Should not start or end with empty space")
             }
         
+        let containEmoji = input.shopNameTrigger.filter{ $0.containsEmoji }.map { _ -> String? in
+            return .some("Should not contain emoji")
+        }
+        
         let checkShopName = input.shopNameTrigger.filter {
-            $0.count > 3 && !$0.hasPrefix(" ") && !$0.hasSuffix(" ")
+            $0.count > 3 && !$0.hasPrefix(" ") && !$0.hasSuffix(" ") && !$0.containsEmoji
         }
         .flatMapLatest { [useCase] name in
             useCase.checkShopName(name)
@@ -56,7 +60,8 @@ class OpenShopViewModel: ViewModelType {
         let shopNameError = Driver.merge(
             lessThan3,
             containEmptySpace,
-            checkShopName
+            checkShopName,
+            containEmoji
         )
         
         return Output(
