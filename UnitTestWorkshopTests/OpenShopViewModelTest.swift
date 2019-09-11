@@ -12,9 +12,8 @@ import RxSwift
 
 @testable import UnitTestWorkshop
 
-public class OpenShopViewModelTest: QuickSpec {
-    
+public class OpenShopViewModelTest: QuickSpec {    
     public override func spec() {
-        
+
     }
 }

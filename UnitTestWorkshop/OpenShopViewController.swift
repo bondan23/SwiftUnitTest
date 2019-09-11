@@ -22,7 +22,21 @@ class OpenShopViewController: UIViewController {
     @IBOutlet var submitButton: UIButton!
     @IBOutlet var switchTNC: UISwitch!
     
+    private let viewModel: OpenShopViewModel
+    
     init() {
+        let useCase = OpenShopUsecase()
+        
+        useCase.getDomainNameSuggestion = {
+            return Observable.just("\($0)-4")
+        }
+        
+        useCase.checkShopName = { _ in
+            return Observable.just(nil)
+        }
+        
+        self.viewModel = OpenShopViewModel(useCase: useCase)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -43,6 +57,28 @@ class OpenShopViewController: UIViewController {
     }
     
     func bindViewModel() {
+        let input = OpenShopViewModel.Input(
+            shopNameTrigger: shopNameTextField.rx
+                .controlEvent(.editingChanged)
+                .withLatestFrom(shopNameTextField.rx.text)
+                .filterNil()
+                .asDriverOnErrorJustComplete()
+        )
         
+        let output = viewModel.transform(input: input)
+        
+        output.shopNameError.drive(onNext:{ [weak self] value in
+            if let value = value, value.isNotEmpty {
+                self?.shopNameError.text = value
+            }
+            
+            self?.shopNameError.isHidden = value?.isEmpty ?? true
+        })
+        .disposed(by: rx_disposeBag)
+        
+        output.domainName.drive(onNext:{ [weak self] text in
+            self?.domainNameTextField.text = text
+        })
+        .disposed(by: rx_disposeBag)
     }
 }
