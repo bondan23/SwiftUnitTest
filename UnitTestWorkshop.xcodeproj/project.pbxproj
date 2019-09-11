@@ -28,6 +28,7 @@
 		23E3181F22E2082D00A898EC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3181E22E2082D00A898EC /* NSObjectExtension.swift */; };
 		23E3182222E208EC00A898EC /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182022E2086700A898EC /* TestObserver.swift */; };
 		23E3182622E2094E00A898EC /* OpenShopViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */; };
+		23F754EE2329569400709214 /* PlaygroundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F754ED2329569400709214 /* PlaygroundTest.swift */; };
 		69AD42C58AB3FDA49898E737 /* Pods_UnitTestWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1BE32F8FB10F153C66149 /* Pods_UnitTestWorkshop.framework */; };
 		B92195D66D36D7E666606127 /* Pods_UnitTestWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30BC5092FD4A73603757547 /* Pods_UnitTestWorkshopTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		23E3181E22E2082D00A898EC /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		23E3182022E2086700A898EC /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
 		23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenShopViewModelTest.swift; sourceTree = "<group>"; };
+		23F754ED2329569400709214 /* PlaygroundTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundTest.swift; sourceTree = "<group>"; };
 		70058CA74B60C80C62340BAE /* Pods-UnitTestWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshopTests/Pods-UnitTestWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C91D5A98E1ABA6B715AA2C0 /* Pods-UnitTestWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshop/Pods-UnitTestWorkshop.release.xcconfig"; sourceTree = "<group>"; };
 		7FA1BE32F8FB10F153C66149 /* Pods_UnitTestWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 			children = (
 				23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */,
 				23E317E622E2010000A898EC /* Info.plist */,
+				23F754ED2329569400709214 /* PlaygroundTest.swift */,
 			);
 			path = UnitTestWorkshopTests;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F754EE2329569400709214 /* PlaygroundTest.swift in Sources */,
 				23E3182222E208EC00A898EC /* TestObserver.swift in Sources */,
 				23E3182622E2094E00A898EC /* OpenShopViewModelTest.swift in Sources */,
 			);
