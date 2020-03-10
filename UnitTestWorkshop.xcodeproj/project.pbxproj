@@ -29,6 +29,17 @@
 		23E3182222E208EC00A898EC /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182022E2086700A898EC /* TestObserver.swift */; };
 		23E3182622E2094E00A898EC /* OpenShopViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */; };
 		23F754EE2329569400709214 /* PlaygroundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F754ED2329569400709214 /* PlaygroundTest.swift */; };
+		62B125AE2417A1BC00C125EA /* CheckoutFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B125AC2417A1BC00C125EA /* CheckoutFlowViewController.swift */; };
+		62B125AF2417A1BC00C125EA /* CheckoutFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B125AD2417A1BC00C125EA /* CheckoutFlowViewController.xib */; };
+		62B125B32417A1F200C125EA /* Open1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B125B12417A1F200C125EA /* Open1ViewController.swift */; };
+		62B125B42417A1F200C125EA /* Open1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B125B22417A1F200C125EA /* Open1ViewController.xib */; };
+		62B125B72417A1FD00C125EA /* Open2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B125B52417A1FD00C125EA /* Open2ViewController.swift */; };
+		62B125B82417A1FD00C125EA /* Open2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B125B62417A1FD00C125EA /* Open2ViewController.xib */; };
+		62B125BB2417A21700C125EA /* Open3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B125B92417A21700C125EA /* Open3ViewController.swift */; };
+		62B125BC2417A21700C125EA /* Open3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B125BA2417A21700C125EA /* Open3ViewController.xib */; };
+		62B125BF2417B06400C125EA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B125BD2417B06400C125EA /* BaseViewController.swift */; };
+		62B125C02417B06400C125EA /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B125BE2417B06400C125EA /* BaseViewController.xib */; };
+		62B125C22417C66700C125EA /* CheckoutFlowViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B125C12417C66700C125EA /* CheckoutFlowViewModelTest.swift */; };
 		69AD42C58AB3FDA49898E737 /* Pods_UnitTestWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1BE32F8FB10F153C66149 /* Pods_UnitTestWorkshop.framework */; };
 		B92195D66D36D7E666606127 /* Pods_UnitTestWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30BC5092FD4A73603757547 /* Pods_UnitTestWorkshopTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +82,17 @@
 		23E3182022E2086700A898EC /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
 		23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenShopViewModelTest.swift; sourceTree = "<group>"; };
 		23F754ED2329569400709214 /* PlaygroundTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundTest.swift; sourceTree = "<group>"; };
+		62B125AC2417A1BC00C125EA /* CheckoutFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFlowViewController.swift; sourceTree = "<group>"; };
+		62B125AD2417A1BC00C125EA /* CheckoutFlowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutFlowViewController.xib; sourceTree = "<group>"; };
+		62B125B12417A1F200C125EA /* Open1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open1ViewController.swift; sourceTree = "<group>"; };
+		62B125B22417A1F200C125EA /* Open1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Open1ViewController.xib; sourceTree = "<group>"; };
+		62B125B52417A1FD00C125EA /* Open2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open2ViewController.swift; sourceTree = "<group>"; };
+		62B125B62417A1FD00C125EA /* Open2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Open2ViewController.xib; sourceTree = "<group>"; };
+		62B125B92417A21700C125EA /* Open3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open3ViewController.swift; sourceTree = "<group>"; };
+		62B125BA2417A21700C125EA /* Open3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Open3ViewController.xib; sourceTree = "<group>"; };
+		62B125BD2417B06400C125EA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		62B125BE2417B06400C125EA /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		62B125C12417C66700C125EA /* CheckoutFlowViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFlowViewModelTest.swift; sourceTree = "<group>"; };
 		70058CA74B60C80C62340BAE /* Pods-UnitTestWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshopTests/Pods-UnitTestWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C91D5A98E1ABA6B715AA2C0 /* Pods-UnitTestWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestWorkshop/Pods-UnitTestWorkshop.release.xcconfig"; sourceTree = "<group>"; };
 		7FA1BE32F8FB10F153C66149 /* Pods_UnitTestWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +143,7 @@
 		23E317CE22E200FD00A898EC /* UnitTestWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				62B125AB2417A19500C125EA /* CheckoutFlow */,
 				23E317DB22E200FF00A898EC /* Info.plist */,
 				233D52EB22E814B200DE7213 /* OpenShopViewController.swift */,
 				23E317FE22E2055F00A898EC /* OpenShopViewModel.swift */,
@@ -148,6 +171,7 @@
 				23E3182522E2094E00A898EC /* OpenShopViewModelTest.swift */,
 				23E317E622E2010000A898EC /* Info.plist */,
 				23F754ED2329569400709214 /* PlaygroundTest.swift */,
+				62B125C12417C66700C125EA /* CheckoutFlowViewModelTest.swift */,
 			);
 			path = UnitTestWorkshopTests;
 			sourceTree = "<group>";
@@ -186,6 +210,31 @@
 				23E3181822E2062E00A898EC /* City.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		62B125AB2417A19500C125EA /* CheckoutFlow */ = {
+			isa = PBXGroup;
+			children = (
+				62B125B02417A1E300C125EA /* VCs */,
+				62B125AC2417A1BC00C125EA /* CheckoutFlowViewController.swift */,
+				62B125AD2417A1BC00C125EA /* CheckoutFlowViewController.xib */,
+			);
+			path = CheckoutFlow;
+			sourceTree = "<group>";
+		};
+		62B125B02417A1E300C125EA /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				62B125BD2417B06400C125EA /* BaseViewController.swift */,
+				62B125BE2417B06400C125EA /* BaseViewController.xib */,
+				62B125B12417A1F200C125EA /* Open1ViewController.swift */,
+				62B125B22417A1F200C125EA /* Open1ViewController.xib */,
+				62B125B52417A1FD00C125EA /* Open2ViewController.swift */,
+				62B125B62417A1FD00C125EA /* Open2ViewController.xib */,
+				62B125B92417A21700C125EA /* Open3ViewController.swift */,
+				62B125BA2417A21700C125EA /* Open3ViewController.xib */,
+			);
+			path = VCs;
 			sourceTree = "<group>";
 		};
 		66EBAD6480B28CD5DE5FBCCC /* Pods */ = {
@@ -294,9 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E3180922E2055F00A898EC /* OpenShopViewController.xib in Resources */,
+				62B125AF2417A1BC00C125EA /* CheckoutFlowViewController.xib in Resources */,
+				62B125B82417A1FD00C125EA /* Open2ViewController.xib in Resources */,
+				62B125B42417A1F200C125EA /* Open1ViewController.xib in Resources */,
 				23E3180A22E2055F00A898EC /* CityViewController.xib in Resources */,
 				23E3180822E2055F00A898EC /* PostalCodeViewController.xib in Resources */,
+				62B125BC2417A21700C125EA /* Open3ViewController.xib in Resources */,
 				23E317DA22E200FF00A898EC /* LaunchScreen.storyboard in Resources */,
+				62B125C02417B06400C125EA /* BaseViewController.xib in Resources */,
 				23E317D722E200FF00A898EC /* Assets.xcassets in Resources */,
 				23E317D522E200FD00A898EC /* Main.storyboard in Resources */,
 			);
@@ -418,15 +472,20 @@
 				23E3181F22E2082D00A898EC /* NSObjectExtension.swift in Sources */,
 				233D52EC22E814B300DE7213 /* OpenShopViewController.swift in Sources */,
 				23E3180322E2055F00A898EC /* PostalCodeViewController.swift in Sources */,
+				62B125B32417A1F200C125EA /* Open1ViewController.swift in Sources */,
 				23E3181B22E2073700A898EC /* StringExtension.swift in Sources */,
+				62B125BF2417B06400C125EA /* BaseViewController.swift in Sources */,
+				62B125BB2417A21700C125EA /* Open3ViewController.swift in Sources */,
 				23E317D222E200FD00A898EC /* ViewController.swift in Sources */,
 				23E317F822E2031100A898EC /* ViewModelType.swift in Sources */,
+				62B125B72417A1FD00C125EA /* Open2ViewController.swift in Sources */,
 				23E3181122E2058C00A898EC /* OpenShopUsecase.swift in Sources */,
 				23E3181D22E207A600A898EC /* UIKitExtension.swift in Sources */,
 				23E317F222E2030300A898EC /* Observable+Ext.swift in Sources */,
 				23E3181922E2062E00A898EC /* City.swift in Sources */,
 				23E317D022E200FD00A898EC /* AppDelegate.swift in Sources */,
 				23E3180722E2055F00A898EC /* OpenShopViewModel.swift in Sources */,
+				62B125AE2417A1BC00C125EA /* CheckoutFlowViewController.swift in Sources */,
 				23E3180622E2055F00A898EC /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B125C22417C66700C125EA /* CheckoutFlowViewModelTest.swift in Sources */,
 				23F754EE2329569400709214 /* PlaygroundTest.swift in Sources */,
 				23E3182222E208EC00A898EC /* TestObserver.swift in Sources */,
 				23E3182622E2094E00A898EC /* OpenShopViewModelTest.swift in Sources */,
